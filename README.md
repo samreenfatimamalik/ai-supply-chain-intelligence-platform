@@ -20,3 +20,6 @@ Python, FastAPI, PostgreSQL, LightGBM, Prophet, Streamlit, Docker, GitHub Action
 - Configured PostgreSQL running inside a Docker container
 - Initialized Git repository and pushed to GitHub
 - Designed and created database schema — 6 core tables: warehouses, suppliers, skus, inventory, orders, shipments (with relationships and indexes)
+- Synthetic dataset generated (50 warehouses, 5k SKUs, 400 suppliers, 150k orders, 137.9k shipments) using Faker + statistical distributions with seasonal and reliability-linked patterns
+- Data validated (referential integrity, null checks, value ranges) — all checks passed
+- Dataset loaded into PostgreSQL via Docker container (bulk COPY load)
