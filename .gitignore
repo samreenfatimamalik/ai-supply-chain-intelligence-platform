@@ -1,0 +1,15 @@
+# Environment / secrets
+.env
+.env.txt
+
+# Generated data (regenerate via scripts/generate_synthetic_data.py, seed=42)
+data/*.csv
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
