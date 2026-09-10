@@ -23,3 +23,10 @@ Python, FastAPI, PostgreSQL, LightGBM, Prophet, Streamlit, Docker, GitHub Action
 - Synthetic dataset generated (50 warehouses, 5k SKUs, 400 suppliers, 150k orders, 137.9k shipments) using Faker + statistical distributions with seasonal and reliability-linked patterns
 - Data validated (referential integrity, null checks, value ranges) — all checks passed
 - Dataset loaded into PostgreSQL via Docker container (bulk COPY load)
+- Set up FastAPI application with modular structure (api/main.py, database.py, models, schemas, routers)
+- Configured SQLAlchemy connection to PostgreSQL via .env
+- Built SQLAlchemy models for warehouses, suppliers, skus, orders tables
+- Created Pydantic response schemas for API serialization
+- Implemented read CRUD endpoints (GET list + GET by id) for warehouses, SKUs, and orders
+- Verified all endpoints working via FastAPI's auto-generated Swagger UI (/docs)
+- Created dedicated conda environment "supplychain" for project dependency isolation
