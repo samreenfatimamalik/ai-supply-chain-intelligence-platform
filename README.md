@@ -16,7 +16,7 @@ Python, FastAPI, PostgreSQL, LightGBM, Prophet, Streamlit, Docker, GitHub Action
 
 ## Progress Log
 
-- Set up project folder structure (api, data, ml, dashboard, notebooks, tests, docker)
+- Set up project folder structure (api, data, ml, dashboard, notebooks, tests, docker etc)
 - Configured PostgreSQL running inside a Docker container
 - Initialized Git repository and pushed to GitHub
 - Designed and created database schema — 6 core tables: warehouses, suppliers, skus, inventory, orders, shipments (with relationships and indexes)
