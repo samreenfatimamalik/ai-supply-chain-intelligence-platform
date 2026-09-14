@@ -25,3 +25,10 @@ def test_db():
     with engine.connect() as connection:
         result = connection.execute(text("SELECT 1"))
         return {"db_connection": "success", "result": result.fetchone()[0]}
+    
+from api.routers import warehouses, skus, orders, forecast  
+
+app.include_router(warehouses.router)
+app.include_router(skus.router)
+app.include_router(orders.router)
+app.include_router(forecast.router)  

@@ -41,3 +41,16 @@ class OrderOut(BaseModel):
 
     class Config:
         from_attributes = True
+        
+class ForecastRequest(BaseModel):
+    horizon_days: int = 30  # how many days ahead to predict — 7, 14, 30, or 90
+
+class ForecastPoint(BaseModel):
+    date: str
+    predicted_demand: float
+    lower_bound: float
+    upper_bound: float
+
+class ForecastResponse(BaseModel):
+    horizon_days: int
+    forecast: list[ForecastPoint]
