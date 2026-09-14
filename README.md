@@ -29,3 +29,8 @@ Python, FastAPI, PostgreSQL, LightGBM, Prophet, Streamlit, Docker, GitHub Action
 - Implemented read CRUD endpoints (GET list + GET by id) for warehouses, SKUs, and orders
 - Verified all endpoints working via FastAPI's auto-generated Swagger UI (/docs)
 - Created dedicated conda environment "supplychain" for project dependency isolation
+## Demand Forecasting
+- Forecasts overall daily demand using Prophet (multiplicative seasonality)
+- Evaluated on a 90-day holdout: MAE ≈ 130, RMSE ≈ 164, R² ≈ 0.43
+- LightGBM (with lag/rolling features) was also tested but did not outperform Prophet on this dataset
+- R² is below the 0.70 target; attributed to intentional randomness in the synthetic order data — the model correctly captures trend and Nov/Dec seasonality (see notebook plots) but daily-level noise limits point-prediction accuracy
