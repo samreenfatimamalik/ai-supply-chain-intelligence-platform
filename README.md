@@ -34,3 +34,4 @@ Python, FastAPI, PostgreSQL, LightGBM, Prophet, Streamlit, Docker, GitHub Action
 - Evaluated on a 90-day holdout: MAE ≈ 130, RMSE ≈ 164, R² ≈ 0.43
 - LightGBM (with lag/rolling features) was also tested but did not outperform Prophet on this dataset
 - R² is below the 0.70 target; attributed to intentional randomness in the synthetic order data — the model correctly captures trend and Nov/Dec seasonality (see notebook plots) but daily-level noise limits point-prediction accuracy
+- Forecasting API endpoint (`POST /forecast/predict`) — takes a horizon (7/14/30/90 days) and returns predicted demand with confidence bounds from the trained Prophet model
